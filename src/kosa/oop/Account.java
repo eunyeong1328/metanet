@@ -23,9 +23,9 @@ public class Account {
 		balance += amount;
 	}
 	
-	public int withdraw(int amount) {
-		if(balance<amount) {
-			return 0;
+	public int withdraw(int amount) throws Exception {
+		if(balance<amount) { 
+			throw new Exception("잔액부족");
 		}
 		balance -= amount;
 		

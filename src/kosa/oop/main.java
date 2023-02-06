@@ -11,20 +11,30 @@ public class main {
 //		//account.balance = 5000; //더이상 접근이 안 된다 <= 캡슐화하였기 때문
 //		account.setBalance(5000);
 //		
-		CheckingAccount ca = new CheckingAccount("111-111","홍길동",10000,"111-111");
+		//계좌 확인
+//		CheckingAccount ca = new CheckingAccount("111-111","홍길동",10000,"111-111");
+//		
+//		try {
+//			System.out.println();
+//			ca.pay("111-111", 300000);
+//			System.out.println();
+//		}catch (Exception e) {
+//			System.out.println();
+//			e.printStackTrace();
+//		}finally {
+//			System.out.println();
+//		}
+//		System.out.println();
+//		
+//		ca.printAccount();
+		
+		Account account = new MinusAccount("111-111","홍길동",5000,10000); //부모로 형변환
 		
 		try {
-			System.out.println();
-			ca.pay("111-111", 300);
-			System.out.println();
+			account.withdraw(12000); //minusaccount의 withdraw
 		}catch (Exception e) {
-			System.out.println();
 			e.printStackTrace();
-		}finally {
-			System.out.println();
 		}
-		System.out.println();
-		
-		ca.printAccount();
+		account.printAccount();
 	}
 }
