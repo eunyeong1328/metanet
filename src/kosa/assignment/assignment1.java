@@ -20,9 +20,9 @@ public class assignment1 {
 			for(int j=1; j<=i; j++) {
 				System.out.print("*");
 			}
-//			for(int j=n; j<=n-i; j++) {
-//				System.out.println("*");
-//			}
+			for(int j=n; j<=n-i; j++) {
+				System.out.println("*");
+			}
 			System.out.println();
 		}
 	}
