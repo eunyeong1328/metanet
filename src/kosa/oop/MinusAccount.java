@@ -22,18 +22,4 @@ public class MinusAccount extends Account{
 		return amount;
 	}
 	
-//	public int payCredit(int amount) {
-//		if( getBalance() < amount) {
-//			System.out.println("대출하시겠습니까? (y|n)");
-//			if(privateCredit<amount) {
-//				privateCredit = 300000; //대출한도
-//				System.out.println("대출되었습니다.");
-//				System.out.println("대출 후 남은 금액 : " + (privateCredit - amount));
-//			}
-//		}
-//		return withdraw(amount);
-//	}
-	
-	
-
 }

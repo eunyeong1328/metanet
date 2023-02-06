@@ -13,7 +13,12 @@ public class main {
 //		
 		//계좌 확인
 //		CheckingAccount ca = new CheckingAccount("111-111","홍길동",10000,"111-111");
-//		
+		//처음 생성될 때 부터 부모
+		Account obj2 = new CheckingAccount("1111-1111","홍길동",1000,"111-111");
+		CheckingAccount obj1 = (CheckingAccount) obj2; //잘못된 캐스팅 연산
+		
+		//처음 생성될 때 부터 자식
+//		CheckingAccount obj1 = obj1;
 //		try {
 //			System.out.println();
 //			ca.pay("111-111", 300000);
@@ -27,6 +32,7 @@ public class main {
 //		System.out.println();
 //		
 //		ca.printAccount();
+
 		
 		Account account = new MinusAccount("111-111","홍길동",5000,10000); //부모로 형변환
 		
