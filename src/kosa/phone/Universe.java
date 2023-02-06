@@ -32,7 +32,7 @@ public class Universe extends PhoneInfo{
 	public void show() {
 		super.show();
 		System.out.println("학과: " + major);
-		System.out.println("학년: " + year );
+		System.out.println("학번: " + year );
 	}
 
 

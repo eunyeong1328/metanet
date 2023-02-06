@@ -22,10 +22,7 @@ public class Manager {
 		System.out.print("생년월일: ");
 		String birth = sc.nextLine();
 
-		System.out.println("1.일반(전체출력)  2.회사  3.동창  ");
-		System.out.println("입력: ");
-		String menuOne = sc.nextLine();
-		switch (menuOne) {
+		switch (menu) {
 		case "1":
 			arr[count++] = new PhoneInfo(name, phoneNo, birth);
 			break;
@@ -45,8 +42,6 @@ public class Manager {
 			;
 			arr[count++] = new Company(name, phoneNo, birth, major, year);
 			break;
-		default:
-			return;
 		}
 	}
 
@@ -74,8 +69,6 @@ public class Manager {
 					arr[i].show();
 				}
 			}
-			break;
-		default:
 			break;
 		}
 	}

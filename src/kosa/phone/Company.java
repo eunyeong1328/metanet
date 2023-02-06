@@ -32,7 +32,7 @@ public class Company extends PhoneInfo {
 	public void show() {
 		super.show();
 		System.out.println("부서: " + dept);
-		System.out.println("위치: " + position );
+		System.out.println("직책: " + position );
 	}
 
 }
