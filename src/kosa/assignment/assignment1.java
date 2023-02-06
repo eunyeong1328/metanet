@@ -14,7 +14,6 @@ public class assignment1 {
 			System.out.println();
 		}
 		
-		for()
 		
 		
 		for(int i=1; i<=n; i++) {
