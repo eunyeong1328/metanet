@@ -1,0 +1,35 @@
+package kosa.mission4;
+
+public class Order {
+	private Food food;//음식
+	private int amount; //갯수
+	public Order() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Order(Food food,int amount) {
+		super();
+		this.food = food;
+		this.amount = amount;
+	}
+	
+	public Food getFood() {
+		return food;
+	}
+	public void setFood(Food food) {
+		this.food = food;
+	}
+	public int getAmount() {
+		return amount;
+	}
+	public void setAmount(int amount) {
+		this.amount = amount;
+	}
+	
+	public void show() {
+		System.out.println("주문갯수 :" + amount);
+	}
+	
+	
+
+}

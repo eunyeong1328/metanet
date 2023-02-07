@@ -1,0 +1,30 @@
+package kosa.mission4;
+
+import java.util.LinkedList;
+import java.util.Scanner;
+import java.util.Stack;
+
+public class Manager {
+	Scanner sc = new Scanner(System.in);
+	LinkedList<Order> order = new LinkedList<Order>();
+	int total = 0;
+	
+	public void add() {
+		
+			System.out.println("1.짜장 (6) 2.짬뽕 (7) 3.탕수육 (10) 4.주문종료");
+			String menu = sc.nextLine();
+			
+			switch (menu) {
+			case "1":
+				order.add(new Order(new Food("짜장면",6)));//주문1개
+				System.out.println("몇 개를 주문하기겠습니까?");
+				int count = sc.nextInt();
+				order.add(new Order(count));
+				break;
+			default:
+				break;
+			}
+		
+	}
+
+}

@@ -1,0 +1,53 @@
+package kosa.mission4;
+
+import java.util.LinkedList;
+import java.util.Scanner;
+import java.util.Stack;
+
+public class Manager {
+	Scanner sc = new Scanner(System.in);
+	LinkedList<Order> order = new LinkedList<Order>();
+	int total = 0;
+	
+	public void add() {
+		while(true) {
+			System.out.println("주문메뉴를 골라주세요");
+			System.out.println("1.짜장 (6) 2.짬뽕 (7) 3.탕수육 (10) 4.주문종료");
+			String menu = sc.nextLine();
+			
+			switch (menu) {
+			case "1":
+				order.add(new Order(new Food("짜장면",6)));//주문1개
+				System.out.println("몇 개를 주문하시겠습니까?");
+				int one = sc.nextInt();
+				order.add(new Order(one));
+				break;
+			case "2":
+				order.add(new Order(new Food("짬뽕",7)));//주문1개
+				System.out.println("몇 개를 주문하시겠습니까?");
+				int two = sc.nextInt();
+				order.add(new Order(two));
+				break;
+			case "3":
+				order.add(new Order(new Food("탕수육",10)));//주문1개
+				System.out.println("몇 개를 주문하시겠습니까?");
+				int three = sc.nextInt();
+				order.add(new Order(three));
+				break;
+			case "4":
+				return;
+			}
+		}
+		
+	}
+	
+	public void print() {
+		while(!order.isEmpty()) {
+			System.out.println();
+			System.out.print("음식이름:"+order.poll().getFood().getFoodName());
+			System.out.print("음식갯수:"+order.poll().getAmount());
+		}
+		System.out.println("주문이확인되었습니다: ");
+	}
+
+}

@@ -1,0 +1,68 @@
+package kosa.mission4;
+
+import java.util.LinkedList;
+import java.util.Scanner;
+import java.util.Stack;
+
+public class Manager {
+	Scanner sc = new Scanner(System.in);
+	LinkedList<Order> order = new LinkedList<Order>();
+	int total = 0;
+	
+	public void add() {
+		System.out.println("주문메뉴를 골라주세요");
+		while(true) {
+			System.out.println("1번.짜장6원  2번.짬뽕7원  3번.탕수육 10원  4.주문종료");
+			String addmenu = sc.nextLine();
+			
+			switch (addmenu) {
+			case "1":
+				System.out.println("몇 개를 주문하시겠습니까?");
+				int one = sc.nextInt();
+				order.add(new Order(new Food("짜장면",6),one));
+				break;
+			case "2":
+				System.out.println("몇 개를 주문하시겠습니까?");
+				int two = sc.nextInt();
+				order.add(new Order(new Food("짬뽕",7),two));
+				break;
+			case "3":
+				System.out.println("몇 개를 주문하시겠습니까?");
+				int three = sc.nextInt();
+				order.add(new Order(new Food("탕수육",10),three));
+				break;
+			case "4":
+				return;
+			}
+		}
+		
+	}
+	
+	public void print() {
+		while(!order.isEmpty()) {
+			System.out.println(order.size());
+			for(int i=0; i<order.size(); i++) {
+				order.get(i).getFood().show();
+				order.get(i).show();
+			}
+			break;
+		}
+	}
+	
+	public void totalAccount() {
+		int sum = 0; //총가격
+		int price = 0; //가격
+		int account = 0; //갯수
+		
+		
+		while(!order.isEmpty()) {
+			for(int i=0; i<order.size(); i++) {
+				sum += order.get(i).getFood().getPrice();
+			}
+			break;
+		}
+		System.out.println("총: " + sum + "원 입니다");
+
+	}
+
+}

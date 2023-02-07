@@ -1,0 +1,20 @@
+package kosa.assignment;
+
+public class problem1 {
+	
+	public static void main(String[] args) {
+		int n = 5;
+		int i = 1;
+		int j = 1;
+			
+		for(i=0; i<n; i++) {
+			for(j=1; j<i*10; j++) {
+				System.out.print(j + (i*5)  +  " ");
+			}
+			System.out.println();
+		}
+	}
+	
+	
+	
+}
