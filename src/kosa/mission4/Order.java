@@ -1,17 +1,29 @@
 package kosa.mission4;
 
 public class Order {
-	private Food food;
-	private int amount; //총액
-	public Order() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-	public Order(Food food) {
+	private Food food;//음식
+	private int amount; //갯수
+	private int allPrice;//주문금액
+	
+	public Order() {}
+	
+	public Order(Food food, int amount) {
 		super();
 		this.food = food;
 		this.amount = amount;
 	}
+	
+	//총액 출력
+//	public int total() {
+//		int totalPrice = food.getPrice() * amount;
+//		return totalPrice;
+//	}
+	
+	public int payOrder(int amount) {
+		allPrice = amount * food.getPrice();
+		return allPrice;
+	}
+
 	public Food getFood() {
 		return food;
 	}
@@ -25,6 +37,7 @@ public class Order {
 		this.amount = amount;
 	}
 	
-	
-
+	public void show() {
+		System.out.println("가격은 총: " + amount + "원 입니다");
+	}
 }

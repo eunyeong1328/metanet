@@ -1,38 +1,33 @@
 package kosa.mission4;
 
 public class Food {
-	private String foodName;
-	private String price;
+	private String foodName; //음식
+	private int price; //가격
+
+	public Food() {}
 	
-	public Food() {
-		super();
-	}
-	public Food(String foodName, String price) {
+	public Food(String foodName, int price) {
 		super();
 		this.foodName = foodName;
 		this.price = price;
 	}
-	
-	public void show() {
-		System.out.println("1.짜장면(6) 2.짬뽕(7) 3.탕수육(12)");
-	}
-	
-	public void foodSelect() {
-		System.out.println("음식 : " + foodName);
-		System.out.println("가격 : " + price);
-	}
-	
+
 	public String getFoodName() {
 		return foodName;
 	}
 	public void setFoodName(String foodName) {
 		this.foodName = foodName;
 	}
-	public String getPrice() {
+	public int getPrice() {
 		return price;
 	}
-	public void setPrice(String price) {
+	public void setPrice(int price) {
 		this.price = price;
+	}
+	
+	public void show() {
+		System.out.print("음식 : " + foodName);
+		System.out.print(", 가격 : " + price + "원");
 	}
 
 }
